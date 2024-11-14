@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 23:29:23 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/03 16:54:42 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/14 22:10:41 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,22 +95,22 @@ static char	*read_file(int fd, char *res)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[65534];
+	static char	*buffer;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
-		if (buffer[fd])
+		if (buffer)
 		{
-			free(buffer[fd]);
-			buffer[fd] = NULL;
+			free(buffer);
+			buffer = NULL;
 		}
 		return (NULL);
 	}
-	buffer[fd] = read_file(fd, buffer[fd]);
-	if (!buffer[fd])
+	buffer = read_file(fd, buffer);
+	if (!buffer)
 		return (NULL);
-	line = ft_get_line(buffer[fd]);
-	buffer[fd] = ft_get_remainder(buffer[fd]);
+	line = ft_get_line(buffer);
+	buffer = ft_get_remainder(buffer);
 	return (line);
 }
