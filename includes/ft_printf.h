@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:20:13 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 21:37:55 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/14 22:31:27 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdio.h>
 # include <stdarg.h>
-
-# ifndef DEBUG
-#  define DEBUG 0
-# endif
 
 typedef struct s_printf_params
 {
@@ -63,7 +59,6 @@ typedef struct s_printf_params
  */
 int				ft_printf(const char *str, ...);
 
-int				ft_printf(const char *str, ...);
 size_t			ft_printf_s(t_printf_params *printf_params, char *str);
 size_t			ft_printf_x(t_printf_params *params, unsigned int n, int upper);
 size_t			ft_printf_c(t_printf_params *params, char c);
