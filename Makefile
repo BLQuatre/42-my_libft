@@ -6,7 +6,7 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:56:43 by cauvray           #+#    #+#              #
-#    Updated: 2024/11/14 22:30:40 by cauvray          ###   ########.fr        #
+#    Updated: 2024/11/18 11:39:23 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,6 +114,7 @@ STR_SRC		= $(addprefix $(STR_DIR)/, $(STR_FILES))
 # A to B functions
 TO_DIR		= to
 TO_FILES	= ft_atoi.c \
+			ft_atol.c \
 			ft_itoa.c \
 			ft_tolower.c \
 			ft_toupper.c
