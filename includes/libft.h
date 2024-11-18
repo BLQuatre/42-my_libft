@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:31:43 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 21:35:35 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/18 11:33:54 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -679,7 +679,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * ignored. If the string contains invalid characters, the conversion stops
  * at the first non-numeric character.
  *
- * @param nptr A pointer to the string to be converted. The string must be
+ * @param s A pointer to the string to be converted. The string must be
  *   null-terminated.
  * @return The converted integer value. If the converted value is outside
  * the range of representable values, behavior is undefined.
@@ -687,7 +687,25 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * @note The function does not handle overflow. Ensure that the input string
  * represents a valid integer within the range of the return type.
  */
-int		ft_atoi(const char *nptr);
+int		ft_atoi(const char *s);
+
+/**
+ * @brief Converts a string to an long integer.
+ *
+ * This function converts the initial portion of the string pointed to by
+ * nptr to its long integer representation. Leading whitespace characters are
+ * ignored. If the string contains invalid characters, the conversion stops
+ * at the first non-numeric character.
+ *
+ * @param s A pointer to the string to be converted. The string must be
+ *   null-terminated.
+ * @return The converted long integer value. If the converted value is outside
+ * the range of representable values, behavior is undefined.
+ *
+ * @note The function does not handle overflow. Ensure that the input string
+ * represents a valid long integer within the range of the return type.
+ */
+long	ft_atol(const char *s);
 
 /**
  * @brief Converts an integer to a string.

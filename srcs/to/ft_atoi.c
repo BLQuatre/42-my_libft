@@ -6,35 +6,26 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:11:59 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 20:22:22 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/18 11:34:20 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *s)
 {
-	int	nb;
-	int	negative;
-	int	i;
+	int	result;
+	int	sign;
 
-	i = 0;
-	nb = 0;
-	negative = 0;
-	while (ft_isspace(nptr[i]))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while (ft_isspace(*s))
+		s++;
+	if (*s == '-' || *s == '+')
 	{
-		if (nptr[i] == '-')
-			negative = 1;
-		i++;
+		if (*s == '-')
+			sign = -1;
+		s++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		nb = (nb * 10) + (nptr[i] - '0');
-		i++;
-	}
-	if (negative)
-		nb *= -1;
-	return (nb);
+	while (ft_isdigit(*s))
+		result = result * 10 + (*s++ - '0');
+	return (result * sign);
 }
