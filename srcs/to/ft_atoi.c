@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:11:59 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/18 11:34:20 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/19 19:29:22 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_atoi(const char *s)
 	int	result;
 	int	sign;
 
+	result = 0;
+	sign = 1;
 	while (ft_isspace(*s))
 		s++;
 	if (*s == '-' || *s == '+')
