@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:31:43 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/18 11:33:54 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/19 21:30:30 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -362,16 +362,17 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar_fd(char c, int fd);
 
 /**
- * @brief Writes a character to the specified file descriptor.
+ * @brief Writes a string to the specified file descriptor.
  *
- * This function writes the character c to the file descriptor specified by fd.
+ * This function writes the string s to the file descriptor fd with newline.
  *
- * @param c The character to be written.
- * @param fd The file descriptor where the character will be written.
+ * @param s The string to be written without new line.
+ * @param fd The file descriptor where the string will be written.
  *
- * @note If fd is invalid, the behavior of the function is undefined.
+ * @note If s is NULL, the function does nothing. If fd is invalid,
+ * the behavior of the function is undefined.
  */
-void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief Writes an integer to the specified file descriptor.
