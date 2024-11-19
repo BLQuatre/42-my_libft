@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:32:13 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/18 11:34:25 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/19 17:50:39 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ long	ft_atol(const char *s)
 	long	result;
 	int		sign;
 
+	result = 0;
+	sign = 1;
 	while (ft_isspace(*s))
 		s++;
 	if (*s == '-' || *s == '+')
