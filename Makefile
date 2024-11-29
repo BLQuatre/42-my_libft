@@ -6,7 +6,7 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:56:43 by cauvray           #+#    #+#              #
-#    Updated: 2024/11/27 02:36:23 by cauvray          ###   ########.fr        #
+#    Updated: 2024/11/29 08:53:24 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ GNL_FILES		= get_next_line.c
 IS_FILES		= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_islower.c ft_isprint.c ft_isspace.c ft_isupper.c
 LST_FILES		= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
-				ft_lstnew.c ft_lstsize.c
+				ft_lstdelone.c ft_lstget.c ft_lstiter.c ft_lstlast.c \
+				ft_lstiter_param.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 MEM_FILES		= ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 				ft_memmove.c ft_memset.c
 PRINTF_FILES	= ft_hex_utils.c ft_int_utils.c ft_printf_utils.c \
