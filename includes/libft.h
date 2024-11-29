@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:31:43 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/19 21:30:30 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/11/29 08:45:33 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,6 +167,33 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /**
+ * @brief Returns the element of the list at the given index.
+ *
+ * This function returns a pointer to the element
+ * of the list at the given index.
+ *
+ * @param lst A pointer to the first element of the list.
+ * @param index A index of the element in the list
+ * @return A pointer to the element of the list at the given index,
+ * NULL if the list is empty or last element if index is superior to list size.
+ */
+t_list	*ft_lstget(t_list *lst, int index);
+
+/**
+ * @brief Iterates over the list and applies a function to each element
+ * with the ptr as second parameter.
+ *
+ * This function applies the function f to the content of
+ * each element in the list pointed to by lst with the ptr as second parameter.
+ *
+ * @param lst A pointer to the first element of the list.
+ * @param f A pointer to a function that takes a pointer
+ * to the content of an element and a ptr, given in function as third parameter.
+ * @param ptr The third parameter and second arg of the function
+ */
+void	ft_lstiter_param(t_list *lst, void (*f)(void *, void *), void *ptr);
+
+/**
  * @brief Iterates over the list and applies a function to each element.
  *
  * This function applies the function f to the content of
@@ -237,7 +264,7 @@ int		ft_lstsize(t_list *lst);
  * This function writes n zeroed bytes to the memory area pointed to by s.
  * It is commonly used to initialize memory blocks.
  *
- * @param s A pointer to the memory area to be filled with zeros. 
+ * @param s A pointer to the memory area to be filled with zeros.
  * It must be a valid pointer, and the memory area should be large
  * enough to hold n bytes.
  * @param n The number of bytes to be set to zero. If n is zero, the function
@@ -251,7 +278,7 @@ void	ft_bzero(void *s, size_t n);
  * @brief Allocates memory for an array and initializes it to zero.
  *
  * This function allocates memory for an array of `nmemb` elements, each of
- * size `size`, and initializes all bytes in the allocated memory to zero. 
+ * size `size`, and initializes all bytes in the allocated memory to zero.
  * It is equivalent to allocating memory with `malloc` and then using `memset`
  * to set all bytes to zero.
  *
@@ -445,7 +472,7 @@ char	*ft_strchr(const char *s, int c);
 /**
  * @brief Duplicates a string.
  *
- * This function allocates sufficient memory for a copy of the string s, 
+ * This function allocates sufficient memory for a copy of the string s,
  * copies it into the newly allocated memory,
  * and returns a pointer to the duplicated string.
  *
@@ -493,7 +520,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 /**
  * @brief Appends a string to the end of another string with size limit.
  *
- * This function appends the string src to the end of dst, up to size bytes, 
+ * This function appends the string src to the end of dst, up to size bytes,
  * and guarantees null-termination of the resulting string.
  * The size parameter specifies the total size of the destination buffer.
  *
@@ -513,7 +540,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  * @brief Copies a string to a destination with size limit.
  *
  * This function copies the string src to dst,
- * ensuring that dst is null-terminated 
+ * ensuring that dst is null-terminated
  * if size is greater than 0.
  * The size parameter specifies the total size of the destination buffer.
  *
