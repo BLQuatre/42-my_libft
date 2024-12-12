@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 04:26:45 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 20:49:01 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:56:48 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include "libft.h"
 
 static void	ft_save_flag(t_printf_params **printf_params, char c)

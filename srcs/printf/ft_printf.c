@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:05:40 by cauvray           #+#    #+#             */
-/*   Updated: 2024/10/27 00:48:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:57:03 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include "libft.h"
 
 static int	ft_free_params(t_printf_params *params)

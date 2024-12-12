@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:14:10 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 20:47:56 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:56:27 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include "libft.h"
 
 int	ft_is_parsed_char(char c)
