@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:31:43 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/29 08:45:33 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:48:52 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -468,6 +468,18 @@ char	**ft_split(char const *s, char c);
  * @return A pointer to the first occurrence of c in s, or NULL if not found.
  */
 char	*ft_strchr(const char *s, int c);
+
+/**
+ * @brief Join the two strings
+ *
+ * This function returns a pointer to the malloc string
+ * The s1 parameter is free.
+ *
+ * @param s1 The first string to join (which is free).
+ * @param s2 The second string to join (which isn't free).
+ * @return The joined string
+ */
+char	*ft_strcleanjoin(char *s1, char *s2);
 
 /**
  * @brief Duplicates a string.
