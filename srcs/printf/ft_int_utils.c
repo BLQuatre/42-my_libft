@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:21:05 by cauvray           #+#    #+#             */
-/*   Updated: 2024/11/02 20:47:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:57:13 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include "libft.h"
 
 size_t	ft_unbrlen(unsigned int n)

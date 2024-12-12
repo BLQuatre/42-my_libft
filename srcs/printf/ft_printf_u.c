@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 21:08:26 by cauvray           #+#    #+#             */
-/*   Updated: 2024/10/27 21:14:16 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/12 02:56:55 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include "libft.h"
 
 static long long	ft_spaces_u(char *str, t_printf_params *params)
