@@ -3,3 +3,5 @@ objs/
 *.out
 *.a
 *.o
+
+.vscode/
